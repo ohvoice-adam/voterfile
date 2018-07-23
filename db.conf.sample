@@ -1,0 +1,6 @@
+export PGUSER=
+export PGPASSWORD=
+export PGHOST=
+export PGDATABASE=
+export INDEX=
+export MVIEW=
