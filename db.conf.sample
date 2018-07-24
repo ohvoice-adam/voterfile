@@ -4,3 +4,4 @@ export PGHOST=
 export PGDATABASE=
 export INDEX=
 export MVIEW=
+export PGSTR="postgresql://$PGUSER:$PGPASSWORD@$PGHOST/$PGDATABASE"
