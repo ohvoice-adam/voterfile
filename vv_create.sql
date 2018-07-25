@@ -19,3 +19,5 @@ CREATE MATERIALIZED VIEW IF NOT EXISTS public.vote_verify AS
 
 CREATE INDEX gin_metaphone_all_last_new_idx ON public.vote_verify USING gin (((county)::text), metaphone((first_name)::text, 4), metaphone((last_name)::text, 8) gin_trgm_ops);
 CREATE INDEX btree_upper_concat_name_idx ON public.vote_verify USING btree (upper((((county)::text || (last_name)::text) || (first_name)::text)));
+CREATE INDEX btree_middle_name_idx ON public.vote_verify USING btree (middle_name);
+CREATE INDEX birth_year_idx on public.vote_verify USING btree (birth_year);
