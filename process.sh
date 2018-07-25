@@ -2,7 +2,7 @@
 
 
 #FIX BAD FIELD
-#sed -i 's/\"ALL\ VISHA\"/ALL\ VISHA/' downloads/voterfile.csv
+sed -i 's/\"ALL\ VISHA\"/ALL\ VISHA/' downloads/voterfile.csv
 
 source db.conf
 LASTDATE=$(tail -2 updateDates.txt | head -1)
