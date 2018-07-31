@@ -16,3 +16,4 @@ psql -c "CREATE TABLE voterfile ( like voterfile_$LASTDATE )"
 psql -f $INDEX
 psql -f $MVIEW
 
+mv downloads/voterfile.csv downloads/old/voterfile.csv
