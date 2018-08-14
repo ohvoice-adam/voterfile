@@ -32,3 +32,5 @@ Thumbs.db
 *.conf
 *.md5
 *.txt
+run.sh
+

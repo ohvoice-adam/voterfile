@@ -1,5 +1,4 @@
-REFRESH MATERIALIZED VIEW vote_verify;
-CREATE MATERIALIZED VIEW IF NOT EXISTS public.vote_verify AS
+CREATE MATERIALIZED VIEW IF NOT EXISTS public.vote_verify2 AS
  SELECT v.sos_voterid,
     v.first_name,
     v.middle_name,
