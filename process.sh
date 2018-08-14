@@ -7,6 +7,7 @@ sed -i 's/\"ALL\ VISHA\"/ALL\ VISHA/' downloads/voterfile.csv
 source db.conf
 LASTDATE=$(tail -2 updateDates.txt | head -1)
 
+psql -c "CREATE TABLE IF NOT EXISTS public.numbers ( date_updated date, active integer, confirmation integer, total integer)"
 psql -c "ALTER TABLE voterfile RENAME to voterfile_$LASTDATE"
 psql -c "CREATE TABLE voterfile ( like voterfile_$LASTDATE )"
 #pgfutter csv downloads/voterfile.csv
