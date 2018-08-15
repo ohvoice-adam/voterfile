@@ -109,4 +109,4 @@ CREATE INDEX voterfile_township ON public.voterfile USING btree (township) ;
 CREATE INDEX voterfile_village ON public.voterfile USING btree (village) ;
 CREATE INDEX voterfile_voter_status ON public.voterfile USING btree (voter_status) ;
 CREATE INDEX voterfile_ward ON public.voterfile USING btree (ward) ;
-insert into numbers select CURRENT_TIMESTAMP, count(*) filter (where voter_status = 'ACTIVE'), count(*) filter (where voter_status = 'CONFIRMATION'), count(*) from voterfile;
+insert into numbers (date_updated, active, confirmation, total) select CURRENT_TIMESTAMP, count(*) filter (where voter_status = 'ACTIVE'), count(*) filter (where voter_status = 'CONFIRMATION'), count(*) from voterfile;
