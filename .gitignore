@@ -32,6 +32,7 @@ Thumbs.db
 *.conf
 *.md5
 *.txt
+*.bak
 run.sh
 updateDates.txt
 
