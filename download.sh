@@ -13,3 +13,4 @@ mv downloads/SWVF1.csv downloads/voterfile.csv
 tail -n+2 downloads/SWVF2.csv >> downloads/voterfile.csv
 tail -n+2 downloads/SWVF3.csv >> downloads/voterfile.csv
 tail -n+2 downloads/SWVF4.csv >> downloads/voterfile.csv
+rm -f downloads/SWVF*
