@@ -21,7 +21,7 @@ psql -c "CREATE TABLE voterfile_new ( like voterfile )"
 #psql -f $MVIEW
 
 pigz downloads/voterfile.csv
-/home/ubuntu/.local/bin/aws s3 cp downloads/voterfile.csv.gz s3://$S3BUCKET/voterfile_$TODAY/voterfile_$TODAY.csv.gz
+/home/$USER/.local/bin/aws s3 cp downloads/voterfile.csv.gz s3://$S3BUCKET/voterfile_$TODAY/voterfile_$TODAY.csv.gz
 rm -f downloads/voterfile.csv.gz
 mv downloads/voterfile.csv downloads/old/voterfile.csv
 ./index.sh
