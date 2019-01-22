@@ -57,6 +57,8 @@ else
 	psql -c "CREATE INDEX voterfile_general_11_08_2016_$TODAY  ON public.voterfile_new USING btree (general_11_08_2016) ;"
 	psql -c "CREATE INDEX voterfile_general_11_18_2008_$TODAY  ON public.voterfile_new USING btree (general_11_18_2008) ;"
 	psql -c "CREATE INDEX voterfile_general_12_11_2007_$TODAY  ON public.voterfile_new USING btree (general_12_11_2007) ;"
+	psql -c "CREATE INDEX voterfile_general_08_07_2018_$TODAY  ON public.voterfile_new USING btree (general_08_07_2018) ;"
+	psql -c "CREATE INDEX voterfile_general_11_07_2018_$TODAY  ON public.voterfile_new USING btree (general_11_06_2018) ;"
 	psql -c "CREATE INDEX voterfile_last_name_$TODAY  ON public.voterfile_new USING gin (last_name) ;"
 	psql -c "CREATE INDEX voterfile_library_$TODAY  ON public.voterfile_new USING btree (library) ;"
 	psql -c "CREATE INDEX voterfile_local_school_district_$TODAY  ON public.voterfile_new USING btree (local_school_district) ;"
